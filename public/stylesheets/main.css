@@ -1,0 +1,269 @@
+#host-profile {
+  font-family: "Roboto", sans-serif;
+  max-width: 1760px;
+  color: #484848;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+@media only screen and (min-width: 744px) {
+  #host-profile {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media only screen and (min-width: 1128px) {
+  #host-profile {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  #host-profile {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+#host-profile #greeting {
+  margin-top: 48px;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 40px;
+  margin-bottom: 32px;
+  flex-basis: 100%;
+}
+@media only screen and (min-width: 744px) {
+  #host-profile #greeting {
+    font-size: 32px;
+  }
+}
+#host-profile #host-info {
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 48px;
+}
+@media only screen and (min-width: 744px) {
+  #host-profile #host-info {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+#host-profile #host-info #photo-box-container {
+  flex-basis: 100%;
+  max-width: 327px;
+  height: fit-content;
+}
+@media only screen and (min-width: 744px) {
+  #host-profile #host-info #photo-box-container {
+    flex-basis: 33.333%;
+  }
+}
+@media only screen and (min-width: 1128px) {
+  #host-profile #host-info #photo-box-container {
+    flex-basis: 25%;
+    max-width: 302px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  #host-profile #host-info #photo-box-container {
+    flex-basis: 16.667%;
+  }
+}
+#host-profile #host-info #photo-box-container #photo-box {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+}
+#host-profile #host-info #photo-box-container #photo-box #photo-box-link {
+  text-decoration: none;
+  cursor: pointer;
+  color: #484848;
+}
+#host-profile #host-info #photo-box-container #photo-box #photo-box-link #host-image {
+  width: 100%;
+}
+#host-profile #host-info #photo-box-container #photo-box #photo-box-link #script-name {
+  font-family: "Dancing Script", cursive;
+  font-size: 2em;
+  text-align: center;
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+  text-decoration: none;
+}
+#host-profile #host-info #photo-box-container #below-image-link {
+  text-decoration: none;
+}
+#host-profile #host-info #photo-box-container #below-image-button {
+  margin-top: 32px;
+  padding: 10px 54px;
+  color: #914669;
+  font-weight: 600;
+  width: 100%;
+  background: transparent;
+  border-color: #914669;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: none;
+}
+@media only screen and (min-width: 744px) and (max-width: 1127px) {
+  #host-profile #host-info #photo-box-container #below-image-button {
+    display: block;
+    text-decoration: none;
+  }
+}
+#host-profile #info-container {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.75em;
+  flex-basis: 100%;
+  margin-top: 32px;
+}
+@media only screen and (min-width: 744px) {
+  #host-profile #info-container {
+    flex-basis: 66.667%;
+    margin-left: 24px;
+    margin-top: 0;
+  }
+}
+@media only screen and (min-width: 1128px) {
+  #host-profile #info-container {
+    flex-basis: 75%;
+    flex-direction: row;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  #host-profile #info-container {
+    flex-basis: 83.333%;
+    flex-direction: row;
+  }
+}
+#host-profile #info-container #description-box {
+  line-height: 1.75;
+  height: fit-content;
+}
+@media only screen and (min-width: 1128px) {
+  #host-profile #info-container #description-box {
+    flex-basis: 66.667%;
+    margin-right: 64px;
+  }
+}
+#host-profile #info-container #description-box #hi-im {
+  font-size: 16px;
+  font-weight: 800;
+}
+@media only screen and (max-width: 744px) {
+  #host-profile #info-container #description-box #hi-im {
+    display: none;
+  }
+}
+#host-profile #info-container #description-box #description {
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 8px;
+}
+#host-profile #info-container #description-box #interaction-header {
+  font-size: 16px;
+  font-weight: 800;
+  margin-top: 32px;
+}
+#host-profile #info-container #description-box #interaction {
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 8px;
+}
+#host-profile #info-container #description-box #cohosts-container {
+  line-height: 1.75;
+  height: fit-content;
+}
+@media only screen and (min-width: 1128px) {
+  #host-profile #info-container #description-box #cohosts-container {
+    flex-basis: 66.667%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+#host-profile #info-container #description-box #cohosts-container #cohosts-header {
+  font-size: 16px;
+  font-weight: 800;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+#host-profile #info-container #description-box #cohosts-container .cohost {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 24px;
+}
+#host-profile #info-container #description-box #cohosts-container .cohost-last {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0px;
+}
+#host-profile #info-container #description-box #cohosts-container .cohost-picture {
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+}
+#host-profile #info-container #description-box #cohosts-container .cohost-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 24px;
+  vertical-align: middle;
+}
+#host-profile #info-container #description-box #cohosts-container .cohost-info .cohost-name {
+  font-size: 16px;
+  font-weight: 800;
+}
+#host-profile #info-container #description-box #cohosts-container .cohost-info .cohost-date-joined {
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 8px;
+}
+#host-profile #info-container #stats-box {
+  margin-top: 32px;
+}
+@media only screen and (min-width: 1128px) {
+  #host-profile #info-container #stats-box {
+    flex-basis: 33.333%;
+    margin-left: -24px;
+    margin-top: 0;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  #host-profile #info-container #stats-box {
+    margin-left: 11.111%;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+#host-profile #info-container #stats-box #button-link {
+  text-decoration: none;
+  cursor: pointer;
+  color: #484848;
+}
+#host-profile #info-container #stats-box #main-button {
+  margin-top: 32px;
+  padding: 10px 54px;
+  color: #914669;
+  font-weight: 600;
+  background: transparent;
+  border-color: #914669;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+@media only screen and (min-width: 744px) and (max-width: 1127px) {
+  #host-profile #info-container #stats-box #main-button {
+    display: none;
+  }
+}
+#host-profile #divider {
+  border-bottom-width: 1px;
+  border-bottom-color: #EBEBEB;
+  border-bottom-style: solid;
+}
+
+/*# sourceMappingURL=main.css.map */

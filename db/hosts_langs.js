@@ -1,0 +1,496 @@
+module.exports = [{
+  "host_id": 1,
+  "language_id": 1
+}, {
+  "host_id": 2,
+  "language_id": 1
+}, {
+  "host_id": 2,
+  "language_id": 2
+}, {
+  "host_id": 2,
+  "language_id": 3
+}, {
+  "host_id": 3,
+  "language_id": 1
+}, {
+  "host_id": 3,
+  "language_id": 8
+}, {
+  "host_id": 4,
+  "language_id": 1
+}, {
+  "host_id": 5,
+  "language_id": 1
+}, {
+  "host_id": 5,
+  "language_id": 3
+}, {
+  "host_id": 6,
+  "language_id": 1
+}, {
+  "host_id": 6,
+  "language_id": 2
+}, {
+  "host_id": 6,
+  "language_id": 4
+}, {
+  "host_id": 7,
+  "language_id": 1
+}, {
+  "host_id": 8,
+  "language_id": 1
+}, {
+  "host_id": 9,
+  "language_id": 1
+}, {
+  "host_id": 10,
+  "language_id": 1
+}, {
+  "host_id": 10,
+  "language_id": 5
+}, {
+  "host_id": 11,
+  "language_id": 1
+}, {
+  "host_id": 12,
+  "language_id": 1
+}, {
+  "host_id": 12,
+  "language_id": 5
+}, {
+  "host_id": 13,
+  "language_id": 1
+}, {
+  "host_id": 14,
+  "language_id": 1
+}, {
+  "host_id": 14,
+  "language_id": 5
+}, {
+  "host_id": 15,
+  "language_id": 1
+}, {
+  "host_id": 15,
+  "language_id": 3
+}, {
+  "host_id": 16,
+  "language_id": 1
+}, {
+  "host_id": 17,
+  "language_id": 1
+}, {
+  "host_id": 17,
+  "language_id": 3
+}, {
+  "host_id": 17,
+  "language_id": 4
+}, {
+  "host_id": 18,
+  "language_id": 1
+}, {
+  "host_id": 19,
+  "language_id": 1
+}, {
+  "host_id": 20,
+  "language_id": 1
+}, {
+  "host_id": 21,
+  "language_id": 1
+}, {
+  "host_id": 22,
+  "language_id": 1
+}, {
+  "host_id": 22,
+  "language_id": 7
+}, {
+  "host_id": 23,
+  "language_id": 1
+}, {
+  "host_id": 24,
+  "language_id": 1
+}, {
+  "host_id": 24,
+  "language_id": 2
+}, {
+  "host_id": 25,
+  "language_id": 1
+}, {
+  "host_id": 26,
+  "language_id": 1
+}, {
+  "host_id": 27,
+  "language_id": 1
+}, {
+  "host_id": 28,
+  "language_id": 1
+}, {
+  "host_id": 28,
+  "language_id": 2
+}, {
+  "host_id": 28,
+  "language_id": 4
+}, {
+  "host_id": 29,
+  "language_id": 1
+}, {
+  "host_id": 29,
+  "language_id": 8
+}, {
+  "host_id": 30,
+  "language_id": 1
+}, {
+  "host_id": 31,
+  "language_id": 1
+}, {
+  "host_id": 31,
+  "language_id": 2
+}, {
+  "host_id": 32,
+  "language_id": 1
+}, {
+  "host_id": 32,
+  "language_id": 5
+}, {
+  "host_id": 33,
+  "language_id": 1
+}, {
+  "host_id": 34,
+  "language_id": 1
+}, {
+  "host_id": 34,
+  "language_id": 2
+}, {
+  "host_id": 35,
+  "language_id": 1
+}, {
+  "host_id": 36,
+  "language_id": 1
+}, {
+  "host_id": 36,
+  "language_id": 4
+}, {
+  "host_id": 37,
+  "language_id": 1
+}, {
+  "host_id": 37,
+  "language_id": 2
+}, {
+  "host_id": 37,
+  "language_id": 4
+}, {
+  "host_id": 38,
+  "language_id": 1
+}, {
+  "host_id": 38,
+  "language_id": 5
+}, {
+  "host_id": 38,
+  "language_id": 7
+}, {
+  "host_id": 39,
+  "language_id": 1
+}, {
+  "host_id": 39,
+  "language_id": 3
+}, {
+  "host_id": 40,
+  "language_id": 1
+}, {
+  "host_id": 40,
+  "language_id": 2
+}, {
+  "host_id": 41,
+  "language_id": 1
+}, {
+  "host_id": 41,
+  "language_id": 2
+}, {
+  "host_id": 42,
+  "language_id": 1
+}, {
+  "host_id": 43,
+  "language_id": 1
+}, {
+  "host_id": 44,
+  "language_id": 1
+}, {
+  "host_id": 45,
+  "language_id": 1
+}, {
+  "host_id": 45,
+  "language_id": 2
+}, {
+  "host_id": 46,
+  "language_id": 1
+}, {
+  "host_id": 46,
+  "language_id": 8
+}, {
+  "host_id": 47,
+  "language_id": 1
+}, {
+  "host_id": 48,
+  "language_id": 1
+}, {
+  "host_id": 48,
+  "language_id": 2
+}, {
+  "host_id": 49,
+  "language_id": 1
+}, {
+  "host_id": 50,
+  "language_id": 1
+}, {
+  "host_id": 51,
+  "language_id": 1
+}, {
+  "host_id": 52,
+  "language_id": 1
+}, {
+  "host_id": 52,
+  "language_id": 5
+}, {
+  "host_id": 53,
+  "language_id": 1
+}, {
+  "host_id": 54,
+  "language_id": 1
+}, {
+  "host_id": 54,
+  "language_id": 6
+}, {
+  "host_id": 55,
+  "language_id": 1
+}, {
+  "host_id": 56,
+  "language_id": 1
+}, {
+  "host_id": 56,
+  "language_id": 2
+}, {
+  "host_id": 56,
+  "language_id": 6
+}, {
+  "host_id": 57,
+  "language_id": 1
+}, {
+  "host_id": 57,
+  "language_id": 2
+}, {
+  "host_id": 58,
+  "language_id": 1
+}, {
+  "host_id": 59,
+  "language_id": 1
+}, {
+  "host_id": 60,
+  "language_id": 1
+}, {
+  "host_id": 61,
+  "language_id": 1
+}, {
+  "host_id": 61,
+  "language_id": 2
+}, {
+  "host_id": 61,
+  "language_id": 3
+}, {
+  "host_id": 62,
+  "language_id": 1
+}, {
+  "host_id": 63,
+  "language_id": 1
+}, {
+  "host_id": 64,
+  "language_id": 1
+}, {
+  "host_id": 64,
+  "language_id": 2
+}, {
+  "host_id": 65,
+  "language_id": 1
+}, {
+  "host_id": 66,
+  "language_id": 1
+}, {
+  "host_id": 66,
+  "language_id": 3
+}, {
+  "host_id": 67,
+  "language_id": 1
+}, {
+  "host_id": 68,
+  "language_id": 1
+}, {
+  "host_id": 68,
+  "language_id": 4
+}, {
+  "host_id": 68,
+  "language_id": 6
+}, {
+  "host_id": 69,
+  "language_id": 1
+}, {
+  "host_id": 70,
+  "language_id": 1
+}, {
+  "host_id": 71,
+  "language_id": 1
+}, {
+  "host_id": 71,
+  "language_id": 6
+}, {
+  "host_id": 72,
+  "language_id": 1
+}, {
+  "host_id": 72,
+  "language_id": 4
+}, {
+  "host_id": 72,
+  "language_id": 6
+}, {
+  "host_id": 73,
+  "language_id": 1
+}, {
+  "host_id": 73,
+  "language_id": 3
+}, {
+  "host_id": 74,
+  "language_id": 1
+}, {
+  "host_id": 75,
+  "language_id": 1
+}, {
+  "host_id": 75,
+  "language_id": 5
+}, {
+  "host_id": 76,
+  "language_id": 1
+}, {
+  "host_id": 77,
+  "language_id": 1
+}, {
+  "host_id": 78,
+  "language_id": 1
+}, {
+  "host_id": 78,
+  "language_id": 6
+}, {
+  "host_id": 79,
+  "language_id": 1
+}, {
+  "host_id": 80,
+  "language_id": 1
+}, {
+  "host_id": 81,
+  "language_id": 1
+}, {
+  "host_id": 81,
+  "language_id": 2
+}, {
+  "host_id": 81,
+  "language_id": 3
+}, {
+  "host_id": 82,
+  "language_id": 1
+}, {
+  "host_id": 83,
+  "language_id": 1
+}, {
+  "host_id": 83,
+  "language_id": 7
+}, {
+  "host_id": 84,
+  "language_id": 1
+}, {
+  "host_id": 85,
+  "language_id": 1
+}, {
+  "host_id": 86,
+  "language_id": 1
+}, {
+  "host_id": 87,
+  "language_id": 1
+}, {
+  "host_id": 87,
+  "language_id": 3
+}, {
+  "host_id": 88,
+  "language_id": 1
+}, {
+  "host_id": 88,
+  "language_id": 5
+}, {
+  "host_id": 89,
+  "language_id": 1
+}, {
+  "host_id": 89,
+  "language_id": 2
+}, {
+  "host_id": 90,
+  "language_id": 1
+}, {
+  "host_id": 90,
+  "language_id": 2
+}, {
+  "host_id": 91,
+  "language_id": 1
+}, {
+  "host_id": 92,
+  "language_id": 1
+}, {
+  "host_id": 92,
+  "language_id": 2
+}, {
+  "host_id": 93,
+  "language_id": 1
+}, {
+  "host_id": 94,
+  "language_id": 1
+}, {
+  "host_id": 94,
+  "language_id": 5
+}, {
+  "host_id": 95,
+  "language_id": 1
+}, {
+  "host_id": 95,
+  "language_id": 2
+}, {
+  "host_id": 96,
+  "language_id": 1
+}, {
+  "host_id": 96,
+  "language_id": 3
+}, {
+  "host_id": 96,
+  "language_id": 4
+}, {
+  "host_id": 97,
+  "language_id": 1
+}, {
+  "host_id": 97,
+  "language_id": 3
+}, {
+  "host_id": 97,
+  "language_id": 4
+}, {
+  "host_id": 98,
+  "language_id": 1
+}, {
+  "host_id": 98,
+  "language_id": 2
+}, {
+  "host_id": 99,
+  "language_id": 1
+}, {
+  "host_id": 99,
+  "language_id": 2
+}, {
+  "host_id": 100,
+  "language_id": 1
+}, {
+  "host_id": 100,
+  "language_id": 3
+}]
