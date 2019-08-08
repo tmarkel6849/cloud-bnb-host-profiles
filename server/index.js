@@ -1,4 +1,3 @@
-require('newrelic')
 require('dotenv').config()
 
 const express = require('express'),
@@ -32,8 +31,8 @@ app.get('/', (req, res) => {
   })
 })
 
-app.get('/proxy', (req, res) => {
-  let hostId = req.params.hostId
+app.get('/proxy:id', (req, res) => {
+  let hostId = req.params.id
   getHost(hostId, (props) => {
     fs.readFile('../public/proxy.html', 'utf8', (err, data) => {
       if ( err ) {

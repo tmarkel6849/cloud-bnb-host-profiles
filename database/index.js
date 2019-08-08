@@ -55,11 +55,11 @@ const getLastHostEntry = (cb) => {
 
   pool.query(hostsQueryString, [ totalHosts ], (err, result1) => {
     if ( err ) {
-      return console.error(err.message)
+      return console.error('error queryign host....', err.message)
     }
     pool.query(langQueryString, [ totalHosts ], (err, result2) => {
       if ( err ) {
-        return console.error(err.message)
+        return console.error('error querying language....', err.message)
       }
       data = [ result1.rows, result2.rows ]
       formattedData = formatData(data, totalHosts)
