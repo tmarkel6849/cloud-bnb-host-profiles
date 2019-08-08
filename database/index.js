@@ -1,11 +1,19 @@
 require('dotenv').config()
 const { Pool } = require('pg'),
-      { totalHosts } = require('./seeds/seeder.js')
+      { totalHosts } = require('./seedFiles/seedParams.js')
 
 /******************* DATABASE CONNECTION ********************/
 
-const pool =  new Pool ({
-  connectionString: 'postgresql://postgres:sdc@ec2-52-27-91-99.us-west-2.compute.amazonaws.com:5432/hostprofiles'
+const pool =  process.env.NODE_ENV === 'production'
+? new Pool ({
+  connectionString: process.env.DB_URI
+})
+: new Pool ({
+  user: process.env.LOCAL_USER,
+  password: process.env.LOCAL_PASSWORD,
+  host: 'localhost',
+  database: 'hostprofiles',
+  port: 5432
 })
 
 /******************* HELPER FUNCTION ***********************/
@@ -94,7 +102,7 @@ const getHost = (host, cb) => {
     langQueryString = `SELECT languages.language FROM languages INNER JOIN hostlangs ON hostlangs.host_id=$1 WHERE languages.id=hostlangs.lang_id;`
   let data, formattedData;
 
-  pool.query(hostsQueryString, [ host], (err, result1) => {
+  pool.query(hostsQueryString, [ host ], (err, result1) => {
     if ( err ) {
       console.error(err.message)
     }

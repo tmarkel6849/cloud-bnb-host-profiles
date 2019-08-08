@@ -5,35 +5,27 @@ const express = require('express'),
       cors = require('cors'),
       path = require('path'),
       fs = require('fs'),
-      { client } = require('./redis.js'),
-      { getLastHostEntry } = require('../SDCpostgreSQL/index.js'),
-      { getRandomHost } = require('../SDCpostgreSQL/index.js'),
-      { getHost } = require('../SDCpostgreSQL/index.js')
+      db = require('../database/index.js'),
+      { client } = require('../database/redis.js')
 
-import renderer from './renderer'
-import { render } from 'react-testing-library';
-
-const port = process.env.PORT || 3005,
+const PORT = process.env.PORT || 3005,
       app = express()
 
+/***************** UNCOMMENT TO COMPILE FOR SSR ******************/
+
+// import renderer from './renderer'
+
+/************************* MIDDLEWARE ****************************/
+
 app.use(cors())
-app.use(express.static(path.join(__dirname + '/../public')))
-app.use(bodyParser.json());app.use(bodyParser.urlencoded())
+app.use(express.static(path.join(__dirname + '../public')))
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
 
-/************************* SSR ROUTES ****************************/
-
-app.get('/', (req, res) => {
-  getRandomHost((props) => {
-    fs.readFile('../public/index.html', 'utf8', (err, data) => {
-      const html = renderer(data, props)
-      res.send(html)
-    })
-  })
-})
+/********************* SSR ROUTES FOR PROXY ************************/
 
 app.get('/proxy:id', (req, res) => {
-  let hostId = req.params.id
-  getHost(hostId, (props) => {
+  db.getHost(req.params.id, (props) => {
     fs.readFile('../public/proxy.html', 'utf8', (err, data) => {
       if ( err ) {
         console.log('error reading file data: ', err)
@@ -45,72 +37,57 @@ app.get('/proxy:id', (req, res) => {
   })
 })
 
-/****************** WITH REDIS ************************/
-
-// app.get('/proxy', (req, res) => {
-//   let id = 99998
-//   console.log('at prxy endpoint....')
-//   client.get(id, (err, result) => {
-//     console.log('checked redis for entry....')
-//     if ( err ) {
-//       console.error('error in redis cache: ', err)
-//       return res.send(500)
-//     }
-//     if ( result ) {
-//       console.log('entry was found in redis....')
-//       return res.send(result).status(201)
-//     } else {
-//       console.log('entry was not found in redis....')
-//       getHost(id, (props) => {
-//         console.log('got the entry from the database....')
-//         fs.readFile('../public/proxy.html', 'utf8', (err, data) => {
-//           if ( err ) {
-//             return console.error('error reading the file: ', err)
-//           }
-//           const html = renderer(data, props)
-//           client.set(id, html)
-//           console.log('entry saved in redis....')
-//           res.send(html)
-//         })
-//       })
-//     }
-//   })
-// })
-
-/********************* ROUTES ACCESSING POSTGRES ************************/
-
-app.get('/postgres/lastentry', (req, res) => {
-  getLastHostEntry((data) => {
-    if ( !data ) {
-      console.log('error retrieving last entry')
-      return res.send(400)
-    }
-    return res.send(data)
+app.get('/proxy/randomentry', (req, res) => {
+  db.getRandomHost((data) => {
+    data ? res.send(data) : res.sendStatus(400)
   })
 })
 
-app.get('/postgres/randomentry', (req, res) => {
-  getRandomHost((data) => {
-    if ( !data ) {
-      console.log('error retrieving random entry')
-      return res.send(400)
+/****************** WITH REDIS CACHE ************************/
+
+app.get('/cache:id', (req, res) => {
+  client.get(req.params.id, (err, result) => {
+    if ( err ) {
+      res.send(500)
+    } else if ( result ) {
+      res.send(result).status(201)
+    } else {
+      db.getHost(id, (props) => {
+        fs.readFile('../public/proxy.html', 'utf8', (err, data) => {
+          if ( err ) {
+            return console.error('error reading the file: ', err)
+          }
+          const html = renderer(data, props)
+          client.set(id, html)
+          res.send(html)
+        })
+      })
     }
-    return res.send(data)
   })
 })
 
-app.get('./postgres/host', (req, res) => {
-  getHost(req.body, ()=> {
-    if ( !data ) {
-      console.error('error retrieveing host')
-      res.send(400)
-    }
-    return res.send(data)
+/********************* ROUTES ACCESSING DATABASE ************************/
+
+app.get('/host:id', (req, res) => {
+  db.getHost(req.params.id, (data) => {
+    data ? res.send(data) : res.sendStatus(400)
+  })
+})
+
+app.get('/lastentry', (req, res) => {
+  db.getLastHostEntry((data) => {
+    data ? res.send(data) : res.sendStatus(400)
+  })
+})
+
+app.get('/randomentry', (req, res) => {
+  db.getRandomHost((data) => {
+    data ? res.send(data) : res.sendStatus(400)
   })
 })
 
 /******************** HEY! LISTIN!! **********************/
 
-app.listen(port, () => {
-  console.log(`listening on port ${port}`)
+app.listen(PORT, (err) => {
+  err ? console.log('error starting server: ', err) : console.log(`listening on ${PORT}....`)
 })
