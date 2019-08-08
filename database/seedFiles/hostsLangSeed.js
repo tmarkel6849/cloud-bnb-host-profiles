@@ -1,12 +1,12 @@
 const createCsvWriter = require('csv-writer').createObjectCsvWriter,
       fs = require('fs'),
-      languages = require('../../db/languages.js'),
+      languages = require('../seedData/languages.js'),
       { pool } = require('../index.js')
-
-let { lastSeededJoin } = require('./seeder.js'),
-    { transactionCount } = require('./seeder.js'),
-    { transaction } = require('./seeder.js'),
-    { transactions } = require('./seeder.js')
+//! import the entire thing into a variable and access each piece off the reference
+let { lastSeededJoin } = require('./seedParams.js'),
+    { transactionCount } = require('./seedParams.js'),
+    { transaction } = require('./seedParams.js'),
+    { transactions } = require('./seedParams.js')
 
 /*********************** Global Variables ***********************/
 
